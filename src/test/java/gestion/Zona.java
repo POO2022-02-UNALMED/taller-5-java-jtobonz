@@ -42,7 +42,7 @@ public class Zona {
 	}	
 	
 	public int cantidadAnimales() {
-		return animales.size();
+		return getAnimales().size();
 	}
 	
 	public void agregarAnimales(Animal animal) {

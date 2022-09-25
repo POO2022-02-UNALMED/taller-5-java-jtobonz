@@ -68,11 +68,11 @@ public class Animal {
 	}
 	
 	public static String totalPorTipo() {
-		return "Mamiferos: " + Mamifero.aux + "\n"
-				+ "Aves: " + Ave.aux + "\n"
-				+ "Reptiles: " + Reptil.aux + "\n"
-				+ "Peces: " + Pez.aux + "\n"
-				+ "Anfibios: " + Anfibio.aux + "\n";
+		return "Mamiferos: " + Mamifero.getListado().size() + "\n"
+				+ "Aves: " + Ave.getListado().size() + "\n"
+				+ "Reptiles: " + Reptil.getListado().size() + "\n"
+				+ "Peces: " + Pez.getListado().size() + "\n"
+				+ "Anfibios: " + Anfibio.getListado().size() + "\n";
 	}
 
 	@Override
@@ -86,8 +86,5 @@ public class Animal {
 		}
 		return x;
 	}
-	
-	
-	
 }
 	
