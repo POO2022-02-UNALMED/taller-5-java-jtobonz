@@ -54,25 +54,14 @@ public class Pez extends Animal {
 		return "nadar";
 	}
 	
-	public void crearSalmon(String nombre, int edad, String genero) {
-		new Mamifero();
-		setNombre(nombre);
-		setEdad(edad);
-		setGenero(genero);
-		setColorEscamas("rojo");
-		setCantidadAletas(6);
-		setHabitat("oceano");
+	public static Animal crearSalmon(String nombre, int edad, String genero) {
+		Animal x = new Pez(nombre, edad, "oceano", genero, "rojo", 6);
 		Pez.salmones ++;
+		return x;
 	}	
 	
-	public void crearBacalao(String nombre, int edad, String genero) {
-		new Mamifero();
-		setNombre(nombre);
-		setEdad(edad);
-		setGenero(genero);
-		setColorEscamas("gris");
-		setCantidadAletas(6);
-		setHabitat("oceano");
+	public static Animal crearBacalao(String nombre, int edad, String genero) {
+		Animal x = new Pez(nombre, edad, "oceano", genero, "gris", 6);
 		Pez.bacalaos ++;
-	}	
+		return x;	}	
 }

@@ -52,25 +52,15 @@ public class Reptil extends Animal {
 		return "reptar";
 	}
 	
-	public void crearIguana(String nombre, int edad, String genero) {
-		new Mamifero();
-		setNombre(nombre);
-		setEdad(edad);
-		setGenero(genero);
-		setColorEscamas("verde");
-		setLargoCola(3);
-		setHabitat("humedal");
+	public static Animal crearIguana(String nombre, int edad, String genero) {
+		Animal x = new Reptil(nombre, edad, "humedal", genero,	"verde", 3);
 		Reptil.iguanas ++;
+		return x;
 	}
 	
-	public void crearSerpiente(String nombre, int edad, String genero) {
-		new Mamifero();
-		setNombre(nombre);
-		setEdad(edad);
-		setGenero(genero);
-		setColorEscamas("blanco");
-		setLargoCola(1);
-		setHabitat("jungla");
+	public static Animal crearSerpiente(String nombre, int edad, String genero) {
+		Animal x = new Reptil(nombre, edad, "jungla", genero,	"blanco", 1);
 		Reptil.serpientes ++;
+		return x;
 	}	
 }

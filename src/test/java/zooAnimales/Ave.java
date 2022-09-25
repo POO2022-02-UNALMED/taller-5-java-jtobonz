@@ -45,36 +45,15 @@ public class Ave extends Animal {
 		return "volar";
 	}
 	
-	public void crearHalcon(String nombre, int edad, String genero) {
-		new Mamifero();
-		setNombre(nombre);
-		setEdad(edad);
-		setGenero(genero);
-		setColorPlumas("cafe glorioso");
-		setHabitat("montanas");
+	public static Animal crearHalcon(String nombre, int edad, String genero) {
+		Animal x = new Ave(nombre, edad, "montanas", genero, "cafe glorioso");
 		Ave.halcones ++;
+		return x;
 	}
 	
-	public void crearAguila(String nombre, int edad, String genero) {
-		new Mamifero();
-		setNombre(nombre);
-		setEdad(edad);
-		setGenero(genero);
-		setColorPlumas("blanco y amarillo");
-		setHabitat("montanas");
+	public static Animal crearAguila(String nombre, int edad, String genero) {
+		Animal x = new Ave(nombre, edad, "montanas", genero, "cafe glorioso");
 		Ave.aguilas ++;
-	}
-	
-	public static void main(String[] args) {
-		new Anfibio();
-		new Anfibio();
-		new Mamifero();
-		new Mamifero();
-		new Mamifero();
-		new Reptil();
-		new Pez();
-		new Ave();
-		new Ave();
-		System.out.println(Animal.totalPorTipo());
+		return x;
 	}
 }
